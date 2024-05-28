@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="login form-login">
+            <h2>Login</h2>
+            <form action="#">
+                <div class="input">
+                    <input type="text" placeholder="USERNAME">
+                    <span><img src="user.svg" alt=""></span>
+                </div>
+                <div class="input">
+                    <input type="password" placeholder="PASSWORD">
+                    <span><img src="password.svg" alt=""></span>
+                </div>
+                <div class="rem">
+                    <label><input type="checkbox">Remember me</label>
+                    <a href="#">Forget Password</a>
+                </div>
+                <button type="submit" class="btn">Login</button>
+                <div class="reg">
+                    <p>Don't have an account?<a href="#" class="reg-link">Register</a></p>
+                </div>
+            </form>
+        </div>
+        <div class="login form-register">
+            <h2>Registration</h2>
+            <form action="#">
+                <div class="input">
+                    <input type="email" placeholder="E-MAIL">
+                    <span><img src="mail.svg" alt=""></span>
+                </div>
+                <div class="input">
+                    <input type="text" placeholder="USERNAME">
+                    <span><img src="user.svg" alt=""></span>
+                </div>
+                <div class="input">
+                    <input type="password" placeholder="PASSWORD">
+                    <span><img src="password.svg" alt=""></span>
+                </div>
+                <div class="rem">
+                    <label><input type="checkbox">I agree to the terms & conditions</label>
+                </div>
+                <button type="submit" class="btn">Register</button>
+                <div class="reg">
+                    <p>Already have an account?<a href="#" class="log-link">Login</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        const container = document.querySelector(".container");
+        const loginlink = document.querySelector(".log-link");
+        const registerlink = document.querySelector(".reg-link");
+
+        registerlink.addEventListener("click",()=>{
+            container.classList.add('active');
+        });
+
+        loginlink.addEventListener("click",()=>{
+            container.classList.remove('active');
+        });
+
+
+
+
+    </script>
+</body>
+
+</html>

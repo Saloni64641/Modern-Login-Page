@@ -1,0 +1,160 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+  background: url(https://images.unsplash.com/photo-1604616835982-7b13663ffca1?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  position: relative;
+  height: 560px;
+  width: 500px;
+  background: transparent;
+  backdrop-filter: blur(20px);
+  border: 2px solid white;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 0px 30px #782f04;
+  transition: height, width 0.2s ease;
+  overflow: hidden;
+}
+
+.container.active {
+  height: 620px;
+  width: 550px;
+}
+
+.container .login {
+  width: 100%;
+  padding: 40px;
+}
+
+.login h2 {
+  font-size: 4rem;
+  font-weight: 700;
+  text-align: center;
+  color: #a75c15;
+  margin: 20px 0px;
+  
+}
+
+.form-login {
+  transition: transform 0.18s ease;
+  transform: translate(0px);
+  /* transform: rotateY(0deg); */
+}
+
+.container.active .form-login {
+  transition: none;
+  transform: translate(-550px);
+  /* transform: rotateY(-360deg); */
+}
+
+.container .form-register {
+  position: absolute;
+  transform: translateX(550px);
+  /* transform: rotateY(360deg); */
+  transition: none;
+}
+
+.container.active .form-register {
+  width: 500px;
+  transition: transform 0.18s ease;
+  transform: translate(0);
+}
+
+.input {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: center;
+}
+
+.input span img {
+  filter: invert(1);
+  width: 35px;
+}
+
+.input input {
+  width: 80%;
+  font-size: 15px;
+  padding: 20px 20px;
+  margin: 15px 0;
+  border-radius: 50px;
+  border: 2px solid white;
+  background: transparent;
+  outline: none;
+  color: white;
+}
+
+.input input::placeholder {
+  color: white;
+}
+
+.rem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 20px;
+  color: white;
+  margin: 10px 0px;
+}
+
+.rem label {
+  cursor: pointer;
+}
+
+.rem label input {
+  margin: 5px;
+}
+
+.rem a {
+  text-decoration: none;
+  color: white;
+}
+
+.rem a:hover {
+  text-decoration: underline;
+}
+
+.btn {
+  width: 100%;
+  font-size: 30px;
+  padding: 15px;
+  margin: 20px 0px;
+  border-radius: 10px;
+  background-color: #762f01;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.reg {
+  text-align: center;
+  color: white;
+  font-size: 20px;
+  margin: 10px 0px;
+}
+.reg a {
+  color: white;
+  text-decoration: none;
+}
+
+.reg a:hover {
+  text-decoration: underline;
+}
